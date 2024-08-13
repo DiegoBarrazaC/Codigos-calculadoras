@@ -1,0 +1,20 @@
+#include <stdio.h>
+//NUMERO INVERTIDO//
+int main() {
+    int numero = 0;
+    int digito = 0;
+    int inverso = 0;
+
+    printf("Escribe un número: ");
+    scanf("%d", &numero);
+
+    while (numero != 0) {
+        digito = numero % 10;
+        numero = numero / 10;
+        inverso = inverso * 10 + digito;
+    }
+
+    printf("El número invertido es %d\n", inverso);
+
+    return 0;
+}

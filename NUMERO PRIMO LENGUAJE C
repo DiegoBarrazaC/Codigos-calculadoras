@@ -1,0 +1,35 @@
+#include <stdio.h>
+// NUMERO PRIMO
+int main() {
+    int num, x, contador;
+    char opcion[3];
+
+    do {
+        printf("Teclea un numero: ");
+        scanf("%d", &num);
+        
+        x = 1;
+        contador = 0;
+        
+        while (x <= num) {
+            if (num % x == 0) {
+                contador++;
+            }
+            x++;
+        }
+        
+        if (contador == 2) {
+            printf("El numero %d tecleado es primo\n", num);
+        } else {
+            printf("El numero %d tecleado no es primo\n", num);
+        }
+        
+        do {
+            printf("¿Deseas verificar otro número? (si/no): ");
+            scanf("%s", opcion);
+        } while (opcion[0] != 's' && opcion[0] != 'n');
+        
+    } while (opcion[0] == 's');
+    
+    return 0;
+}
